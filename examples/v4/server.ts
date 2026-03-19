@@ -1,5 +1,5 @@
-import { makeApi, makeErrors } from "@zodios/core/v4";
-import { zodiosApp, zodiosRouter } from "@zodios/express/v4";
+import { makeApi, makeErrors } from "@twentyfourg/zodios-core/v4";
+import { zodiosApp, zodiosRouter } from "@twentyfourg/zodios-express/v4";
 import { serve, setup } from "swagger-ui-express";
 import { z } from "zod/v4";
 import { bearerAuthScheme, openApiBuilder } from "../../src/index.v4";

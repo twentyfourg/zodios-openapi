@@ -1,4 +1,4 @@
-import { makeApi } from "@zodios/core";
+import { makeApi } from "@twentyfourg/zodios-core";
 import { z } from "zod";
 import {
   toOpenApi,

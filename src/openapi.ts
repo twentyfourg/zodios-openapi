@@ -3,7 +3,7 @@ import type { OpenAPIV3 } from "openapi-types";
 import type {
   ZodiosEndpointDefinition,
   ZodiosEndpointDefinitions,
-} from "@zodios/core";
+} from "@twentyfourg/zodios-core";
 import { z } from "zod";
 import { isZodType } from "./utils";
 

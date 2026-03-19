@@ -10,11 +10,11 @@
  </p>
  
  <p align="center">
-   <a href="https://www.npmjs.com/package/@zodios/openapi">
-   <img src="https://img.shields.io/npm/v/@zodios/openapi.svg" alt="langue typescript">
+  <a href="https://github.com/twentyfourg/zodios-openapi/packages">
+  <img src="https://img.shields.io/badge/GitHub%20Packages-%40twentyfourg%2Fzodios--openapi-blue" alt="langue typescript">
    </a>
-   <a href="https://www.npmjs.com/package/@zodios/openapi">
-   <img alt="npm" src="https://img.shields.io/npm/dw/@zodios/openapi">
+  <a href="https://github.com/twentyfourg/zodios-openapi/packages">
+  <img alt="registry" src="https://img.shields.io/badge/registry-GitHub%20Packages-blue">
    </a>
    <a href="https://github.com/ecyrbe/zodios-openapi/blob/main/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/ecyrbe/zodios-openapi">   
@@ -40,13 +40,13 @@ It's an openapi generator for zodios api description format.
 # Install
 
 ```bash
-> npm install @zodios/openapi
+> npm install @twentyfourg/zodios-openapi
 ```
 
 or
 
 ```bash
-> yarn add @zodios/openapi
+> yarn add @twentyfourg/zodios-openapi
 ```
 
 # How to use it ?
@@ -60,7 +60,7 @@ Here is an example of API declaration with Zodios. Splitted between public and a
 in a common directory (ex: `src/api.ts`) :
 
 ```typescript
-import { makeApi } from "@zodios/core";
+import { makeApi } from "@twentyfourg/zodios-core";
 import { z } from "zod";
 
 export const userApi = makeApi([
@@ -163,9 +163,9 @@ export const adminApi = makeApi([
 in your backend (ex: `src/server.ts`) :
 ```typescript
 import { serve, setup } from "swagger-ui-express";
-import { makeApi } from "@zodios/core";
-import { zodiosApp, zodiosRouter } from "@zodios/express";
-import { bearerAuthScheme, openApiBuilder } from "@zodios/openapi";
+import { makeApi } from "@twentyfourg/zodios-core";
+import { zodiosApp, zodiosRouter } from "@twentyfourg/zodios-express";
+import { bearerAuthScheme, openApiBuilder } from "@twentyfourg/zodios-openapi";
 import { userApi, adminApi } from "./api";
 
 const app = zodiosApp();
