@@ -1,15 +1,32 @@
 {
   "name": "@zodios/openapi",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twentyfourg/zodios-openapi"
+  },
   "description": "Openapi for zodios",
-  "version": "10.5.0",
+  "version": "11.0.0-rc1",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "typings": "lib/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "v4": ["lib/index.v4.d.ts"]
+    }
+  },
   "exports": {
     ".": {
       "import": "./lib/index.mjs",
       "require": "./lib/index.js",
       "types": "./lib/index.d.ts"
+    },
+    "./v4": {
+      "import": "./lib/index.v4.mjs",
+      "require": "./lib/index.v4.js",
+      "types": "./lib/index.v4.d.ts"
     },
     "./package.json": "./package.json"
   },
@@ -20,11 +37,7 @@
     "name": "ecyrbe",
     "email": "ecyrbe@gmail.com"
   },
-  "homepage": "https://github.com/ecyrbe/zodios-openapi",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ecyrbe/zodios-openapi.git"
-  },
+  "homepage": "https://github.com/ecyrbe/zodios-openapi", 
   "license": "MIT",
   "keywords": [
     "zod",
@@ -35,11 +48,12 @@
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "tsup",
+    "example:v4": "ts-node examples/v4/server.ts",
     "test": "jest --coverage"
   },
   "peerDependencies": {
     "@zodios/core": ">=10.5.2 <11.0.0",
-    "zod": "^3.x"
+    "zod": "^3.25.0 || ^4.0.0"
   },
   "devDependencies": {
     "@types/jest": "29.5.5",
@@ -57,7 +71,7 @@
     "ts-node": "10.9.1",
     "tsup": "6.3.0",
     "typescript": "5.2.2",
-    "zod": "3.22.4"
+    "zod": "^3.25.0"
   },
   "dependencies": {
     "openapi-types": "12.1.3",
