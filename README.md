@@ -1,3 +1,16 @@
+ # Maintenace Disclaimer
+
+This repo is not intended to replace the official zod package. This is an internal fork to patch security noitces and add support for zodv4.
+
+If you're a maintainer from zod and somehow make it here, 24G claims no comercial ownership of added code. We would be happy to provide any and all of our changes free of charge and with no IP limitations if they seem useful.
+
+## Changes from last published Zod version
+- Add `/v4` export path for all public methods that support Zod v4.
+- Dropped support for Axios `<1.0.0`.
+- Security updates
+
+# Original README
+
  <h1 align="center">Zodios Openapi</h1>
  <p align="center">
    <a href="https://github.com/ecyrbe/zodios-openapi">
